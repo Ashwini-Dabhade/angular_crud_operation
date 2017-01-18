@@ -1,0 +1,49 @@
+<!DOCTYPE html>
+<html>
+<script src="https://ajax.googleapis.com/ajax/libs/angularjs/1.4.8/angular.min.js"></script>
+<script src="//ajax.googleapis.com/ajax/libs/angularjs/1.4.8/angular-route.js"></script>
+
+
+<script src="app.js"></script>
+
+
+<script src="services/dataServices.js"></script>
+
+<script src="features/booklist.js"></script>
+<script src="features/addBook.js"></script>
+<script src="features/editBook.js"></script>
+
+
+<link href="http://fonts.googleapis.com/css?family=Open+Sans:400,700" rel="stylesheet" />
+
+<!-- The main CSS file -->
+<link href="style.css" rel="stylesheet" />
+
+
+<body ng-app="bookApp">
+
+        <div id="head">
+
+
+                <nav>
+
+                        <ul>
+                                <li><a class="active" href="#booklist">Book List</a></li>
+                                <li><a href="#addBook">Add New Book</a></li>
+                        </ul>
+
+
+                <nav>
+        </div>
+
+        <center>
+                <div id="box">
+                        <center>
+                                <div ng-view></div>
+                                <center>
+                </div>
+                <center>
+
+</body>
+
+</html>

@@ -1,0 +1,46 @@
+<!-- The main CSS file -->
+<link href="style.css" rel="stylesheet" />
+<style>
+ a
+ {
+   text-decoration: none;
+ } 
+ </style>
+
+<div>
+  <br>
+  <input type="text" id="search" placeholder="Search Book.." ng-model="searchBook"><br><br>
+
+
+  <!--{{da}}---->
+
+
+  <table id="myTable">
+    <tr>
+      <th>Sr No </th>
+      <th>Title</th>
+      <th>Year</th>
+      <th>favourite</th>
+      <th></th>
+
+    </tr>
+
+    <tr ng-repeat="x in data | filter: searchBook">
+      <td>{{$index+1}}</td>
+
+      <!--- <td><a href="editBook/{{x.id}}" >{{x.title}}</a></td> -->
+
+
+      <td><a ng-href="#/editBook/{{x.id}}">{{x.title}}</a></td>
+
+      <td>{{x.year}}</td>
+
+      <td>{{x.favorite ? 'Yes' : 'No'}}</td>
+
+      <td> <button id="btn_delete" ng-click="delete(x.id)">Delete</button> </td>
+
+    </tr>
+
+  </table>
+
+</div>

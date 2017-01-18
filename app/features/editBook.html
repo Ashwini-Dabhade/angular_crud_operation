@@ -1,0 +1,56 @@
+		<!-- The main CSS file -->
+<link href="style.css" rel="stylesheet" />
+
+
+<div id="Box">
+
+<h3>UPDATE BOOK</h3>
+<br>
+
+    <form name = "editForm" novalidate>
+            <table >
+                
+
+               
+                <tr>
+                    <td>Title</td>
+                    <td>
+                        
+                        <input type="text" id="title" name="title"   ng-model="x.title" size="20" required>
+                        <span style="color:red" ng-show="editForm.title.$error.required">*</span>
+                        
+                    </td>
+                </tr>
+                <tr>
+                    <td>Year</td>
+                    <td>
+                        <input type="number" id="year" name="year" ng-model="x.year" size="60" required>
+                        <span style="color:red" ng-show="editForm.year.$error.required">*</span>
+                        
+                    </td>
+                </tr>
+                <tr>
+                    <td>Fav</td>
+					<td>
+                        <input type="checkbox" id="check" ng-model="x.favorite">
+                      
+                    </td>
+                </tr>
+                <tr>
+                    <td > <button id="btn_add_edit" ng-disabled ="editForm.id.$invalid || 
+                                               editForm.title.$invalid ||
+                                               editForm.year.$invalid || 
+                                               editForm.favorite.$invalid"
+
+                                            ng-click="UpdateData(x)">Update</button>
+                    </td>
+                </tr>
+            </table>
+
+
+    
+    </form>
+
+</div>
+
+

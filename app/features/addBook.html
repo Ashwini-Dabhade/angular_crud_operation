@@ -1,0 +1,51 @@
+		<!-- The main CSS file -->
+<link href="style.css" rel="stylesheet" />
+
+
+
+<div id="Box">
+<h3>ADD BOOK</h3>
+<br>
+ 
+        <form name = "addForm" novalidate>
+            <table>
+                
+                <tr>
+                    <td>Title</td>
+                    <td>
+                        <input type="text" id="title" name="title" ng-model="add.title" size="20" required>
+                        <span style="color:red" ng-show="addForm.title.$error.required">*</span>
+                        
+                    </td>
+                </tr>
+                <tr>
+                    <td>Year</td>
+                    <td>
+                        <input type="number" id="year" name="year" ng-model="add.year" size="60" required>
+                        <span style="color:red" ng-show="addForm.year.$error.required">*</span>
+                        
+                    </td>
+                </tr>
+                <tr>
+                    <td>Fav</td>
+					<td >
+                        <input type="checkbox" id="check" ng-model="add.favorite">
+                      
+                    </td>
+                </tr>
+                <tr>
+                    <td> <button id="btn_add_edit" ng-disabled ="addForm.id.$invalid || 
+                                               addForm.title.$invalid ||
+                                               addForm.year.$invalid || 
+                                               addForm.favorite.$invalid"
+
+                                            ng-click="AddData()">Add</button>
+                    </td>
+                </tr>
+            </table>
+               <div ng-show="showMe">
+               <div>Data Added Successfully....!!!</div>
+
+        </form>
+</div>
+
